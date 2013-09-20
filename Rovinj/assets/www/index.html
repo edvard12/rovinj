@@ -1,0 +1,432 @@
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Rovinj - Semesterort som utmanar!</title>
+
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="index.css" /> 
+
+    <script src="jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+  
+	<!-- CDN Respositories: For production, replace lines above with these uncommented minified versions -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />-->
+	<!-- <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+	<!-- <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
+	</head>
+  
+  <body onload="init();">
+	<div data-role="page" id="page-home" class="type-interior" data-theme="b">
+
+	<div data-role="header" data-theme="b">
+		<h1>Rovinj - Semesterort som utmanar!</h1>
+ 		<a href="#" data-icon="home" data-iconpos="notext" id="intro" class="ui-btn-right">intro</a>
+	</div>
+
+	<h5><center>2008 uts&aring;gs Rovinj till b&auml;sta turistdestination i Kroatien.</center></h5>
+
+	
+	
+	<div data-role="content" data-theme="c">			
+		<div class="content-secondary">
+			<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="b">
+				<h3>Rovinj guide</h3>
+
+				<ul data-role="listview" data-theme="b" data-dividertheme="b">
+					<li id="listdivider" data-role="list-divider">Rovinj guide</li>
+					<li><a id="click-rovinjinfo">Information</a></li>
+					<li><a id="click-rovinjgamlastan">Gamla stan</a></li>
+					<li><a id="click-rovinjkarta">Karta</a></li>
+					<li><a id="click-rovinjvader">V&auml;dret i Rovinj</a></li>
+					<li><a id="click-rovinjparkering">Parkering i Rovinj</a></li>
+					<li><a id="click-rovinjstrand">Str&auml;nder i Rovinj</a></li>
+					<li><a id="click-istrienutflykter">Utflykter</a></li>
+					<li><a id="click-istriensevardheter">Sev&auml;rdheter</a></li>
+					<li><a id="click-istrieninfo">Info om Istrien</a></li>
+					<li><a id="click-kroatieninfo">Info om Kroatien</a></li>
+					<li><a id="click-rovinjgalleri">Galleri</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content-primary">
+		    <div class="api-div" id="api-intro">
+		         <h2>Kroatien - Istrien - Rovinj - :)</h2>
+				<blockquote>
+  					<p>Rovinj &auml;r en underbar medeltidsstad som omg&auml;rdas av hela 22 &ouml;ar. Mest k&auml;nda &auml;r Sv. Katarina och Crveni otok ( r&ouml;da &ouml;n), som &auml;r utm&auml;rkta utflyktsm&aring;l f&ouml;r sol och bad. Den gamla stadsk&auml;rnan har bevarat sin enast&aring;ende charm med smala gr&auml;nder och sm&aring; torg och l&auml;ngs hamnpromenaden.
+					</p>
+				
+				</blockquote>
+				
+				<center>
+				<img src="images/rovinj17.jpg" border="0" width="320" height="151">
+				</center>
+				
+				<blockquote>
+  					<p>
+					
+						Rovinj erbjuder otaliga m&ouml;jligheter - promenader i vackra naturen, idrottsaktiviteter, utforskning av undanskymda natur och kulturarv, arkeologiska fyndplatser. Du kan njuta av lokala delikatesser och framf&ouml;rallt ha en fantastisk semester i hotell och turistl&auml;genheter av h&ouml;g kvalitet.
+				</p></blockquote>
+				<blockquote><p>
+						Gamla stadens historia g&aring;r tillbaka till romartiden och den gamla staden har bel&auml;grats, f&ouml;rst&ouml;rts och
+						&aring;teruppbyggts under 2000 &aring;r utav bl.a. goter, germaner, slaver och venetianer.
+						Rovinjs gamla medeltida stadsdelen &auml;r fantastiskt vacker.Den &auml;r byggd efter en
+						romersk stadsplan med kyrkan i mitten och byn "fallande" runt omkring.
+					</p>
+				
+				</blockquote>
+
+				
+				<br>
+				<div>
+					<p id="copyright">&copy; 2013 www.Rovinj.nu</p>
+				</div>		    					
+			</div>
+
+		    
+			 <div class="api-div" id="api-rovinjinfo">
+				<h2>Information om Rovinj</h2>
+					<blockquote><p>
+					Mycket speciella &auml;r skorstenarna i gamla stan. L&auml;ngst ut p&aring; udden tornar kyrkan St. Euphemia upp sig med sitt 60 meter h&ouml;ga klocktorn. P&aring; kajerna som omger staden kan man sl&aring; sig ner under ett parasoll och njuta av en perfekt espresso och en vacker utsikt &ouml;ver flitiga fiskeb&aring;tar, gl&auml;nsande yachter och glittrande v&aring;gor. 	Rovinj &auml;r ocks&aring; en av Kroatiens livligaste semesterorter med ett stort urval av barer, restauranger, diskotek och aff&auml;rer. H&auml;r har man alla m&ouml;jligheter till en lyckad semester med m&aring;nga aktiviteter och fina bad.
+					</p></blockquote>
+					
+					<center>
+					<img border="0" src="images/rovinj34.jpg" width="335" height="52">
+					</center>
+					
+					<blockquote><p>
+					De flesta pratar italienska i Rovinj, eller Rovigno, som staden heter p&aring; italienska, och alla skyltar &auml;r skrivna b&aring;de p&aring; kroatiska och italienska. Andra s&ouml;ndagen i augusti varje &aring;r &auml;r det konstutst&auml;llning p&aring; fasaderna i ul Grisia, en av stans gr&auml;nder, vilket gett Rovinj epitetet Istriens Montmartre.
+					<br><br>
+					I n&auml;stan varje h&ouml;rn av Gamla stan hittar du en stunds avkoppling och underh&aring;llning tillsammans med m&aring;nga scenarier, dansare och mycket trevlig musik.
+					P&aring; bara tio minuters promenad fr&aring;n staden centrum finns ett n&ouml;jescentrum Monvi. 
+					 </p></blockquote>
+					 
+					 <blockquote><p>
+					Vi kan s&auml;ga att de flesta restauranger erbjuder specialiteter fr&aring;n Istrien kuhinje. Vanligaste &ouml;ppettider f&ouml;r de flesta restauranger &auml;r mellan 11:00 och 24:00, men bli inte f&ouml;rv&aring;nad om du redan &auml;r i de tidiga timmarna (&auml;ven riktigt sent) hittar restauranger &ouml;ppna.
+					Framf&ouml;r restaurangen oftast finns prislista, och lista vilka kort accepteras. (I princip accepterar n&auml;stan alla kort). I priset ing&aring;r moms men inte dricks. Dricks &auml;r inte obligatoriskt men det &auml;r brukligt att l&auml;mna en n&ouml;jd service kund ca 10 procent av notan.
+					</p></blockquote>
+
+
+
+				
+			</div>
+			
+			
+			
+			<div class="api-div" id="api-rovinjgamlastan">
+				<h2>Gamla stad</h2>
+					<blockquote><p>
+					H&auml;r g&aring;r historia tillbaka till romartiden och den gamla staden har bel&auml;grats, f&ouml;rst&ouml;rts och &aring;teruppbyggts under 2000 &aring;r utav bl.a. goter, germaner, slaver och venetianer. Rovinjs gamla medeltida stadsdelen &auml;r fantastiskt vacker.Den &auml;r byggd efter en romersk stadsplan med kyrkan i mitten och byn "fallande" runt omkring.
+					</p></blockquote>
+					
+					<center>
+					<img border="0" src="images/gamlastan.jpg" width="250" height="294">
+					</center>
+					
+					<blockquote><p>
+					Kullerstensgatorna &auml;r v&auml;l bevarande och slingrar sig fram mellan de t&auml;tt byggda husen. Unikt f&ouml;r Rovinjs gamla stad &auml;r att n&auml;stan alla byggnader vi ser &auml;r original H&ouml;gst upp p&aring; en kulle st&aring;r kyrkan St. Euphemia. Dess 60 meter h&ouml;ga klocktorn &auml;r ett v&auml;lk&auml;nt landm&auml;rke.
+					</p></blockquote>
+				
+			</div>
+			
+			
+			<div class="api-div" id="api-rovinjkarta">
+				<h2>Karta &ouml;ver Rovinj</h2>
+					<center>
+							<iframe width="360" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.se/?ie=UTF8&amp;ll=45.088672,13.629656&amp;spn=0.042479,0.048494&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+					</center>
+			</div>
+			
+			<div class="api-div" id="api-rovinjvader">
+				<h2>V&auml;dret i Rovinj</h2>
+				
+				<center>
+					<a href="http://www.mittvaeder.se/" style="padding:0;background:none" target="_blank" title="Your weather service"><img src="http://www.mittvaeder.se/meteo/hptool/logo_meteogroup.png" alt="" width="120" height="32" border="0" style="display:block;" /></a><div style="background-color:#0060ac;color:#ebf1f8;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:normal;font-size:10px;width:120px;text-align:center"><a href="http://www.mittvaeder.se/se/home/vaeder/vaerlden/stadsvaeder/stad/385X695/rovinj.html" target="_blank" style="color:#ebf1f8;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:normal;font-size:10px;padding:0;background:none" title="Detaljerad v&auml;der prognos f&ouml;r Rovinj">V&auml;der Rovinj</a></div><iframe width="120" height="151" scrolling="no" frameborder="0" src="http://www.mittvaeder.se/meteo/hptool/index.php?cid=385X695&cityName=Rovinj&l=se&style=13&v=se&ver=2&c1=ebf1f8&c2=0060ac&c3=000000&c4=ffffff&c5=000000&c6=ffffff&c7=0060ac&f1a=1&f1b=1&f2a=1&f2b=1&f3a=1&f3b=1&ct1=1&ct2=9&ct3=6&ct4=12&ct5=8&fcd=0"></iframe><div style="height:14px;width:120px;text-align:center;background-color:#0060ac"></div>
+				</center>
+			
+			</div>
+			
+
+			<div class="api-div" id="api-rovinjparkering">
+				<h2>Parkering i Rovinj</h2>
+					<blockquote><p>
+					
+					
+					<b> VALDIBORA </b><br>
+					Valdibora &auml;r centrala parkeringen i Rovinj. Det finns ca: 420 parkerings platser. Priset beror p&aring; m&aring;naden och l&auml;ngden av parkeringen som p&aring; alla andra parkeringar i staden. <br>
+					Pris ca:  4-6 kuna per timme. 
+					<br><br>
+
+					<b> GIORDANO PALIAGA </b><br>
+					GIORDANO PALIAGA finns vid sidan av Valdibora parkeringen. Kapacitet ligger p&aring; ca: 200 bilar. <br>
+					Pris ca:  4-6 kuna per timme. 
+					<br><br>
+
+					<b> VIJENAC BRACE LORENZETTO </b><br>
+					Mindre parkeringen i n&auml;rheten av centret Valalta.  Kapacitet ligger p&aring; ca: 200 bilar. <br>
+					Pris:  4 kuna per timme. 
+					<br><br>
+
+					<b> ALEJA RUDJERA BOSKOVICA </b><br>
+					Parkeringen finns i korsningen mellan aleje R. Boskovica och ul. Konceta, Kapacitet ligger p&aring; ca: 200 bilar. Avst&aring;nd till centrum &auml;r 10 minuters promenad. <br>
+					Pris:  4 kuna per timme. 
+					<br><br>
+
+					<b> OBALA VLADIMIRA NAZORA </b><br>
+					Parkeringen finns i centrum i n&auml;rheten av busstationen. Oftast &auml;r det sv&aring;rt att hitta parkeringsplats. .  Kapacitet ligger p&aring; ca: 120 bilar. <br>
+					Pris:  4 kuna per timme. 
+
+					<br><br>
+
+					Visst kan man gratis parkera p&aring; olika gator och ta liten promenad till centrum. Rovinj &auml;r inte extremt stor.
+
+					
+					</p></blockquote>
+				
+			</div>
+			
+			
+			<div class="api-div" id="api-rovinjstrand">
+				<h2>Str&auml;nder i Rovinj</h2>
+					<blockquote><p>
+					
+						Rovinj anses vara en av de vackraste st&auml;derna p&aring; den kroatiska kusten tack vare dess specifika utseende och bildsk&ouml;na natur. Det som g&ouml;r den unik &auml;r den 67 km l&aring;nga kusten, ett gr&ouml;nomr&aring;de som str&auml;cker sig &ouml;ver 2.289 hektar, 14 &ouml;ar, holmar och klippor samt den charmiga gamla stadsk&auml;rnan.
+						<br><br>
+					
+					    <b> Stranden MONTE </b><br>
+						Det ligger nedanf&ouml;r gamla stan, n&auml;ra till centrum av Rovinj. Stranden &auml;r l&auml;mplig f&ouml;r dem som har hittat boende i Gamla stan. Den &auml;r n&auml;ra till restauranger. En del av stranden &auml;r stenig s&aring; att familjer med sm&aring;barn kan njuta av h&auml;r. Stranden &auml;r s&auml;rskilt attraktiv p&aring; grund av dess unika solnedg&aring;ng som kan ses fr&aring;n denna strand. Den &auml;r l&auml;mplig f&ouml;r dem som gillar att hoppa i havet fr&aring;n klipporna, och nackdelen &auml;r att det inte finns n&aring;gon naturlig skugga.
+						<br><br>
+
+						<b> UVALA LONE</b><br>
+						De mest bes&ouml;kta str&auml;nderna i staden, mycket snyggt inredda, ligger bakom ACI marina och r&auml;knas som stadsstrand. I n&auml;rheten finns &auml;ven Hotel Eden, Mulini, Park  och Montauro samt n&ouml;jescentrum Monvi, tennisbanor och m&aring;nga andra turist-och idrottsanl&auml;ggningar. Stranden kan n&aring;s med bil eller cykel, l&auml;mplig f&ouml;r familjer med sm&aring; barn och har en naturlig skugga. Det finns m&ouml;jligheten att hyra en paddel, b&aring;t …
+						Speciell atmosf&auml;r f&ouml;r det h&auml;r stranden erbjuder fantastisk utsikt &ouml;ver Gamla Stan och &ouml;n St Catherine.
+						<br><br>
+
+						<b> VILLAS RUBIN</b><br>
+						Det ligger i turist byn APP & BGW Villas Rubin och &auml;r ca 1,5 km l&aring;ng. Stranden &auml;r &auml;garen av den bl&aring; flaggan, trevlig och l&auml;mplig f&ouml;r alla &aring;ldrar. L&auml;ngs stranden finns det m&aring;nga restauranger, kiosker, idrottsplaner samt m&ouml;jligheten att hyra en b&aring;t, aerobics ...<br>
+						Intill stranden finns en stor pool och fr&aring;n stranden finns m&aring;nga organiserade b&aring;tutflykter.
+						<br><br>
+
+						<b> POLARI </b><br>
+						Stranden ligger nedanf&ouml;r autokamp Polari, s&ouml;der om turistorten Villas Rubin. En del av stranden &auml;r stenig och l&auml;mpar sig f&ouml;r barn, och det finns rutschkanor, gungor, gungbr&auml;da, etc.
+						Det finns ocks&aring; en restaurang och sport komplex. Den s&ouml;dra delen av stranden &auml;r lite &aring;tskilda och avsedda f&ouml;r naturister. Stranden &auml;r ocks&aring; &auml;gare av den bl&aring;a flaggan. 
+						<br><br>
+
+						<b> SKARABA </b><br>
+						F&ouml;rut var den i s&auml;rklass mest bes&ouml;kta str&auml;nderna i Rovinj. Det ligger i den skyddade parken "Zlatni Rt". Det finns riklig skugga hela dagen h&auml;r och aldrig tr&aring;ngt. Stranden kan n&aring;s med bil men cykeln rekommenderas i och med att du kommer att k&ouml;ra genom en vacker skog vid havet. Kusten &auml;r stenig och inte l&auml;mpar sig f&ouml;r sm&aring; barn eller &auml;ldre.
+						Till denna strand kommer fr&auml;mst de som vill hitta "egen lilla strand" l&aring;ngt ifr&aring;n publik och buller. Stranden erbjuder en magnifik utsikt &ouml;ver Rovinj sk&auml;rg&aring;rd.
+						<br><br>
+						
+					</p></blockquote>
+					
+					<blockquote><p>
+					
+					Naturligtvis finns det en hel del str&auml;nder i staden som inte &auml;r noterade. Stranden vid R&ouml;da Island och Catherine &auml;r mycket popul&auml;ra och kan bes&ouml;kas med b&aring;t. Du kommer s&auml;kert att uppt&auml;cka flera str&auml;nder sj&auml;lv under din vistelse i Rovinj.
+				
+					</p></blockquote>
+				
+			</div>
+			
+			<div class="api-div" id="api-istrienutflykter">
+				<h2>Utflykter Fr&aring;n Rovinj</h2>
+
+					<blockquote><p>
+					
+					<b>Plitvice sj&ouml;arna</b><br>
+					Utnyttja chansen och bes&ouml;k den vackra och speciella nationalparken. Det &auml;r en sann upplevelse f&ouml;r livet. D&auml;r finns 16 kristallklara sj&ouml;ar sammanbundna med otaliga skummande vattenfall. Sj&ouml;arna &auml;r bel&auml;gna i en vacker dal mellan skogskl&auml;dda berg och &auml;r med i UNESCO-s v&auml;rldsarvslista. Mer info: www.np-plitvicka-jezera.hr 
+					<br><br>
+					<b>Venedig i Italien</b><br>
+					Vem har inte l&auml;ngtat att bes&ouml;ka n&aring;gon g&aring;ng den h&auml;r fantastiska staden? Om du semestrar n&aring;gonstans i Istrien har du chans att bes&ouml;ka broarnas och kanalernas stad d&auml;r det v&auml;ntar fantastiska upplevelser i form an konst, kultur och arkitektur. Passa p&aring; att &aring;ka gondol eller ta en promenad &ouml;ver den k&auml;nda Railtobron, ett minne f&ouml;r livet. 
+					<br><br>
+					<b>Trieste i Italien</b><br>
+					En av Europas klassiska badorter vid Adriatiska havet &auml;r samtidigt den stad d&auml;r flera av den moderna litteraturens verk skrivits. P&aring; stadens kaféer skrevs verk som skulle p&aring;verka hela v&auml;rldslitteraturen. James Joyce skrev sina f&ouml;rsta tv&aring; verk h&auml;r och p&aring;b&ouml;rjade "Odysseus" medan Sigmund Freud funderade p&aring; m&auml;nniskans sexualitet.
+					<br><br>	
+					<b>Postojna & Lipica i Slovenien</b><br>
+					Vid gr&auml;nsen till Kroatien ligger Karstaomr&aring;det. Det finns &ouml;ver 6 000 grottor och med 26 miljoner bes&ouml;kare, &auml;r Postojna en utav mest bes&ouml;kta grottorna i Europa. Det finns &auml;ven ett eget litet t&aring;g igenom grottan. 
+					<br><br>
+					<b>Den slovenska kusten</b><br>
+					Slovenien ligger bara en timme bilf&auml;rd fr&aring;n Porec, Rovinj eller Pula. H&auml;r finns en liten kuststr&auml;cka, med intresanta historiska medeltida st&auml;der. 
+					Staden Portoroz, ligger n&auml;ra gr&auml;nsen till Kroatien, men till skillnad fr&aring;n grannens m&aring;nga klippbad har Portoroz en l&aring;ng sandstrand. 
+					<br><br>
+					<b>Den slovenska kusten</b><br>
+					Slovenien ligger bara en timme bilf&auml;rd fr&aring;n Porec, Rovinj eller Pula. H&auml;r finns en liten kuststr&auml;cka, med intresanta historiska medeltida st&auml;der. 
+					Staden Portoroz, ligger n&auml;ra gr&auml;nsen till Kroatien, men till skillnad fr&aring;n grannens m&aring;nga klippbad har Portoroz en l&aring;ng sandstrand. 
+					<br><br>
+					<b>B&aring;tutflykter</b><br>
+					Upplev Istrien fr&aring;n sj&ouml;sidan, n&auml;mligen fr&aring;n havet. Man f&aring;r se klipporna, str&auml;nderna, &ouml;arna och inte minst njuta av sol och hav. Under seglingen bjuds du p&aring; fantastiska naturscenerier och vackra vyer &ouml;ver land. Popul&auml;ra &auml;r ocks&aring; de s&aring; kallade "Fish picknicks" utflykter, som erbjuds som en heldagstur med olika uppl&auml;gg.
+
+					</p></blockquote>
+				
+			</div>
+			
+			
+			<div class="api-div" id="api-istriensevardheter">
+				<h2>Sev&auml;rdheter</h2>
+
+					<blockquote><p>
+					
+						<b>Eufrasius basilika i Porec</b><br>
+						Eufrasius Basilika har sin plats p&aring; UNESCO-s v&auml;rldsarvlistan sedan 1997. H&auml;r finns underbara
+						mosaiker som anses vara de b&auml;st bevarade exemplen p&aring; bysantinsk konst i Kroatien.
+						Kyrkan byggdes p&aring; 500-talet f&ouml;r biskop Eufrasius.
+						<br><br>
+
+						<b>Gamla stad i Rovinj</b><br>
+						H&auml;r g&aring;r historia tillbaka till romartiden och den gamla staden har bel&auml;grats, f&ouml;rst&ouml;rts och
+						&aring;teruppbyggts under 2000 &aring;r utav bl.a. goter, germaner, slaver och venetianer.
+						Rovinjs gamla medeltida stadsdelen &auml;r fantastiskt vacker.Den &auml;r byggd efter en
+						romersk stadsplan med kyrkan i mitten och byn "fallande" runt omkring.
+						<br><br>
+
+						<b>Istriens inland</b><br>
+						Istriens inland p&aring;minner mycket om Toscana i Italien med m&aring;nga sm&aring; medel&aring;ldersbyar p&aring;
+						bergens sluttningar. P&aring; landsbygden odlas oliver och vin och i skogarna sk&ouml;rdas vit tryffel.
+						Vi presenterar Motovun, Groznjan, Hum, Pazin, Labin och Dvigrad.
+						<br><br>
+
+						<b>National park - Brijuni</b><br>
+						En &ouml;grupp med tv&aring; stora och tolv sm&aring; &ouml;ar utanf&ouml;r Istriens v&auml;stkust. &OUML;arna var under Jugoslavientiden
+						Titos sommarparadis och det &auml;r ocks&aring; han som tagit hit alla exotiska djur. P&aring; den st&ouml;rsta av &ouml;arna
+						finns en safaripark med zebror, p&aring;f&aring;glar, mufflonf&aring;r, hjortar och antiloper.
+						P&aring; &ouml;n finns ocks&aring; ruinerna efter en bysantinsk borg d&auml;r man kan leka i de labyrintlika formationerna.
+						<br><br>
+
+						<b>Limfjorden</b><br>
+						Ett alldeles perfekt utflyktsm&aring;l om man tillf&auml;lligt blivit m&auml;tt p&aring; v&auml;rmen. Limfjord &auml;r 11 km
+						l&aring;ng och ligger mellan Rovinj och Porec. Hit kan du ta dig antingen med organiserade b&aring;tturer fr&aring;n Pula,
+						Porec och Rovinj eller p&aring; egen hand med bil eller taxi. Landskapet &auml;r fantastiskt vackert med djupt
+						gr&ouml;na skogar och majest&auml;tiska klipporna som reser sig 150 meter ovanf&ouml;r vattenytan.
+						Inne i fjorden &auml;r det s&ouml;tvatten, l&auml;ngre ut &auml;r vattnet br&auml;ckt.
+						<br><br>
+
+						<b>Baredine-grottan </b><br>
+						Baredine-grottan &auml;r det enda geologiska naturminnet i Istrien. Grottan &auml;r 132 meter djup,
+						med fem salar och en h&auml;vertsj&ouml;. Man kan se m&aring;nga fantastiska formationer av stalaktiter och
+						stalagmiter. Det underjordiska djurlivet &auml;r en v&auml;rld f&ouml;r sig. H&auml;r lever "grottolmen",
+						&auml;ven kallad "m&auml;nniskofisken", olika insekter och sm&aring; genomskinliga kr&auml;ftdjur.
+						Guidade turer p&aring; ca 40 minuter tar dig genom hela h&auml;rligheten.
+						Tel 421-333, fax 427-714, e-mail: jama-baredine@pu.tel.hr, web:
+						www.baredine.com
+						<br><br>
+
+						<b>Gyllene udden - Zlatni Rt (Punta Corrente)</b><br>
+						Strax s&ouml;der om staden Rovinj ligger denna hundra &aring;r gamla skogspark, den f&ouml;rsta i sitt slag i Istrien.
+						Gyllene udden &auml;r ett av de viktigaste skogsomr&aring;dena p&aring; norra delen av kusten. Skogen &auml;r otroligt
+						vacker och hyser en mycket speciell flora. Mellan &auml;ngarna l&ouml;per alléer av olika tr&auml;d: cypress,
+						pinje, ceder, douglasgran och ett best&aring;nd av den s&auml;llsynta himalayacedern.
+						<br><br>
+
+						<b>Kamenjak udden och Medulins sk&auml;rg&aring;rd</b><br>
+						Den flikiga kusten p&aring; halv&ouml;ns sydspets &auml;r lika s&auml;rpr&auml;glad oavsett om man ser den fr&aring;n land,
+						fr&aring;n havet eller fr&aring;n luften. Omr&aring;det &auml;r en av de sista oaserna l&auml;ngs kusten och har beh&aring;llit
+						sin ursprunglighet - en mosaik av &aring;krar, &auml;ngar och skogsdungar, som ser ut som om de
+						steg rakt upp ur havet. Marken p&aring; halv&ouml;ns sydspets, udden Kamenjak, ser ut som om den
+						hade brunnit, men den g&ouml;mmer stora naturrikedomar. Det &auml;r f&ouml;r de m&aring;nga endemiska
+						v&auml;xtarternas skull och f&ouml;r att en del s&auml;llsynta f&aring;gelarter h&auml;ckar h&auml;r,
+						som Kamenjak har f&ouml;rklarats som naturreservat.
+						<br><br>
+
+						<b>Palud - f&aring;gelreservat</b><br>
+						V&aring;tmarken Palud, f&aring;gelreservatet utanf&ouml;r staden Rovinj, &auml;r det b&auml;sta st&auml;llet f&ouml;r den som beh&ouml;ver vila ut,
+						oavsett om man &auml;r f&aring;gel eller m&auml;nniska. Det finns &ouml;ver 200 f&aring;gelarter som lever h&auml;r eller kommer hit
+						under vissa &aring;rstider. I samband med flyttningen kan man f&aring; se riktigt ovanliga arter.
+						F&ouml;r alla som &auml;r intresserade av f&aring;gelsk&aring;dning &auml;r Palud det sj&auml;lvklara resm&aring;let.
+						Det finns en s&auml;rskild ornitologisk guide p&aring; plats.
+
+					</p></blockquote>
+				
+			</div>
+			
+			
+						
+			<div class="api-div" id="api-istrieninfo">
+				<h2>Information om Istrien</h2>
+
+					<blockquote><p>
+					
+					Den stora halv&ouml;n Istrien, som skjuter ut i den nordligaste delen av Adriatiska havet, har tillsammans med de m&aring;nga &ouml;ar som ligger i n&auml;rheten blivit ett av Europas mest omtyckta resm&aring;l. H&auml;r &auml;r naturen prunkande gr&ouml;n och havet frestande turkosbl&aring;tt. Landskapen &auml;r inbjudande med vinodlingar, lantg&aring;rdar, pittoreska byar och medeltida st&auml;der. 
+					<br><br>
+					Istrien kan delas upp i tre omr&aring;den. Den vita Istrien &auml;r en central h&ouml;gsl&auml;tt med karstlandskap av kalksten, glest bevuxen med ek, tall och ask. Den gr&aring;a Istrien best&aring;r av mark med eroderad kalksten och b&ouml;rdig jordm&aring;n. H&auml;r odlar man vin och olivtr&auml;d. Den r&ouml;da Istrien &auml;r en h&ouml;gsl&auml;tt som korsas av floderna Mirna och Rasa. H&auml;r odlar man spannm&aring;l och gr&ouml;nsaker. 
+					<br><br>
+					Istrien har genom &aring;rhundradena varit ett omtyckt semesterm&aring;l f&ouml;r oss europeer. Denna underbara, gr&ouml;na halv&ouml; har genom sin sk&ouml;nhet, och som det f&ouml;r ans&aring;gs, h&auml;lsosamma luft, blivit m&aring;ngas favorit. Hit kom Europas societ under 1900-talet och deras pampiga hotell lever fortfarande kvar och ger Istrien en doft av v&auml;rdighet och fl&auml;rd. 
+					<br><br>
+					De historiska l&auml;mningarna &auml;r m&aring;nga och sev&auml;rda. Romarna byggde st&auml;der l&auml;ngs kusten och p&aring; &ouml;arna, och h&auml;r finns m&aring;nga minnen fr&aring;n romartiden. I Pula finns en mycket v&auml;lbevarad amfiteater som byggdes under det f&ouml;rsta &aring;rhundradet e. Kr. Den &auml;r v&auml;rldens n&auml;stst&ouml;rsta teater av det h&auml;r slaget, bara Colosseum i Rom &auml;r st&ouml;rre. N&auml;rheten till Italien g&ouml;r att Istrien h&aring;ller en h&ouml;g kulturell och kulinarisk klass. Pasta, fisk och skaldjur &auml;r typiska r&auml;tter p&aring; menyn. 
+					<br><br>
+					Centralorten &auml;r Pula, en stad fr&aring;n romartiden, som ligger l&auml;ngst ned p&aring; Istriens sydspets. Andra k&auml;nda badorter &auml;r: Umag, Porec, Rovinj, Medulin, Rabac ...
+					</p></blockquote>
+				
+			</div>
+			
+			<div class="api-div" id="api-kroatieninfo">
+				<h2>Information om Kroatien</h2>
+
+					<blockquote><p>
+					
+					Kroatien &auml;r ett fascinerande land med en stor etnisk, historisk och arkitektonisk m&aring;ngfald och ett omv&auml;xlande landskap. Landet str&auml;cker sig fr&aring;n de &ouml;stra delarna av Alperna i nordv&auml;st, till Pannonian l&aring;glandet och sandbankerna i Danube i &ouml;ster. Den centrala regionen &auml;r t&auml;ckt av bergskedjan Dinara och landets s&ouml;dra delar n&aring;r kusten vid Adriatiska havet.  
+					<br><br>	
+					Naturen i Kroatien &auml;r h&auml;nf&ouml;rande vacker. H&auml;r finns hisnande h&ouml;ga berg, turkosbl&aring;tt vatten, gr&ouml;na pinjeskogar, sm&aring; mjuka kullar och en dramatisk sk&auml;rg&aring;rd.Vattnet &auml;r kristallklart och inbjuder till m&aring;nga sk&ouml;na, svalkande dopp och simturer. 
+					<br><br>	
+					Kroatien har ett varierat utbud som faller de allra flesta i smaken, gammal som ung: h&auml;rliga vandringar, trevliga sm&aring; barer, vattensporter av olika slag, ving&aring;rdar att bes&ouml;ka, god mat av h&ouml;g klass, historiska utflykter, sol och bad… 
+					<br><br>
+					Det kroatiska kustomr&aring;det har ett typiskt medelhavsklimat med torra varma somrar och milda fuktiga vintrar. Kroatiens kust upplever praktiskt taget aldrig sn&ouml; eller minusgrader. Det &auml;r Adriatiska havet som v&auml;rmer upp kustomr&aring;det p&aring; h&ouml;sten och vintern. Kustst&auml;derna speglar &aring;rhundraden av kulturarv fr&aring;n Venedig. Kyrkor, kloster, slott och borgar vittnar om glansdagarna under den sena medeltiden och under ren&auml;ssansen.
+
+					</p></blockquote>
+			</div>
+			
+
+		    <div class="api-div" id="api-rovinjgalleri">
+				<h2>Rovinj galleri</h2>
+					<blockquote><p>
+					N&aring;gra utvalda bilder fr&aring;n Rovinj.
+					</p></blockquote>
+					
+					<center>
+					<img border="0" src="images/rovinj1.jpg" width="320" height="120">
+					</center>
+					<br>
+					<center>
+					<img border="0" src="images/rovinj5.JPG" width="320" height="240">
+					</center>
+					<br>
+					<center>
+					<img border="0" src="images/rovinj13.JPG" width="320" height="125">
+					</center>
+					<br>
+					<center>
+					<img border="0" src="images/rovinj13.jpg" width="320" height="240">
+					</center>
+					<br>
+					<center>
+					<img border="0" src="images/rovinj24.jpg" width="320" height="198">
+					</center>
+					<br>
+					<center>
+					<img border="0" src="images/rovinj19.jpg" width="320" height="120">
+					</center>
+					<br>
+					<center>
+					<img border="0" src="images/rovinj2.jpg" width="320" height="120">
+					</center>
+					<br>
+					<center>
+					<img border="0" src="images/rovinj10.jpg" width="320" height="130">
+					</center>
+					
+				
+			</div>
+
+	
+
+
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" class="footer-docs" data-theme="b">
+		<p>&copy; 2013 www.Rovinj.nu</p>
+	</div>	
+	</div>	
+
+  </body>
+</html>
